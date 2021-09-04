@@ -360,6 +360,10 @@ p {
   text-decoration: none;
 }
 
+.scroll-up:hover{
+  transform: scale(1.2);
+}
+
 .scroll-up .fa{
   font-size: 1.5rem;
   color: var(--skills-text);
@@ -394,7 +398,7 @@ p {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .interest ul {
     display: grid;
     justify-content: center;
@@ -412,11 +416,10 @@ p {
 
   .list-skill .box {
     margin: 0;
-    text-align: left;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .left-side,
   .right-side {
     padding: 20px;
@@ -425,7 +428,9 @@ p {
   .list-skill {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    /* justify-content: center; */
   }
-}
+
+  .list-skill .box {
+    margin: 0;
+    text-align: left;
+  }}
