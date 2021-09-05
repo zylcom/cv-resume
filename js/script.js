@@ -37,7 +37,10 @@ let opt = {
 pdfBtn.addEventListener("click", function () {
   body.classList.add("scale-cv");
   // window.print()
-  html2pdf(areaCV, opt);
+
+  setTimeout(() => {
+    html2pdf(areaCV, opt);
+  }, 1000);
 
   // if (html.dataset.themeColor === "dark") {
   //   html.dataset.themeColor = "light";

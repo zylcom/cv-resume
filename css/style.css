@@ -63,12 +63,12 @@ html {
   padding-top: 3px;
 }
 
-.scale-cv .about.experience .box{
+.scale-cv .about.experience .box {
   display: flex;
   flex-direction: column;
 }
 
-.scale-cv .year-company{
+.scale-cv .year-company {
   margin-bottom: 20px;
 }
 
@@ -109,13 +109,8 @@ html {
 
 .scale-cv .page {
   width: 21cm;
-  min-height: 29.6cm; 
-  /* padding: 20mm; */
-  /* margin: 10mm auto; */
-  /* border: 1px #d3d3d3 solid; */
-  /* border-radius: 5px; */
+  min-height: 29.6cm;
   background: white;
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
 }
 
 body {
@@ -374,11 +369,13 @@ p {
   font-size: 16px;
 }
 
+.scale-cv .list-skill,
 .list-skill {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+.scale-cv .list-skill .box,
 .list-skill .box {
   position: relative;
   width: 100%;
