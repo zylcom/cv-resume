@@ -8,6 +8,14 @@
   --primary: #fafafa;
   --secondary: #fff;
   --tersier: #d2d3db;
+
+  /* font size */
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
 }
 
 html[data-theme-color="dark"] {
@@ -20,6 +28,15 @@ html[data-theme-color="dark"] {
   --tersier: #242526;
 }
 
+body.scale-cv {
+  --h1-font-size: 0.938rem;
+  --h2-font-size: 0.938rem;
+  --h3-font-size: 0.875rem;
+  --normal-font-size: 0.813em;
+  --small-font-size: 0.75em;
+  --smaller-font-size: 0.688em;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +47,75 @@ html[data-theme-color="dark"] {
 
 html {
   scroll-behavior: smooth;
+}
+
+.scale-cv .generate-pdf,
+.scale-cv .mode,
+.scale-cv .scroll-up {
+  visibility: hidden;
+}
+
+.scale-cv .contact-info .text {
+  font-size: var(--small-font-size);
+}
+
+.scale-cv .contact-info {
+  padding-top: 3px;
+}
+
+.scale-cv .about.experience .box{
+  display: flex;
+  flex-direction: column;
+}
+
+.scale-cv .year-company{
+  margin-bottom: 20px;
+}
+
+.scale-cv .container {
+  margin: 0;
+  display: flex;
+}
+
+.scale-cv .left-side,
+.scale-cv .right-side {
+  padding: 15px;
+}
+
+.scale-cv .right-side h5,
+.scale-cv .right-side h4,
+.scale-cv .contact-info.education h5 {
+  font-size: var(--smaller-font-size);
+}
+
+.scale-cv .contact-info.education h4,
+.scale-cv .right-side p {
+  font-size: var(--normal-font-size);
+}
+
+.scale-cv .title2 {
+  font-size: var(--h1-font-size);
+  line-height: var(--h2-font-size);
+}
+
+.scale-cv .skills h3 {
+  font-size: var(--normal-font-size);
+}
+
+.scale-cv .list-skill li {
+  text-align: center;
+  list-style: none;
+}
+
+.scale-cv .page {
+  width: 21cm;
+  min-height: 29.7cm; 
+  /* padding: 20mm; */
+  /* margin: 10mm auto; */
+  /* border: 1px #d3d3d3 solid; */
+  /* border-radius: 5px; */
+  background: white;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
 }
 
 body {
@@ -48,9 +134,9 @@ body {
 .container {
   position: relative;
   width: 100%;
+  margin: 50px 0;
   max-width: 1000px;
   min-height: 1000px;
-  margin: 50px;
   background: #fff;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -58,6 +144,9 @@ body {
 }
 
 .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   background: var(--tersier);
   padding: 40px;
@@ -68,7 +157,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -123,7 +212,7 @@ body {
 
 .profile-text h2 {
   color: var(--primary-text);
-  font-size: 1.5em;
+  font-size: var(--h2-font-size);
   margin-top: 20px;
   text-transform: uppercase;
   text-align: center;
@@ -131,7 +220,7 @@ body {
   line-height: 1.4em;
 }
 .profile-text h2 span {
-  font-size: 0.6em;
+  font-size: var(--smaller-font-size);
   font-weight: 300;
 }
 
@@ -141,6 +230,7 @@ body {
 
 .title {
   width: 100%;
+  font-size: var(--h3-font-size);
   color: var(--primary-text);
   text-transform: uppercase;
   font-weight: 600;
@@ -231,6 +321,9 @@ body {
 } */
 
 .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   background: var(--secondary);
   padding: 40px;
@@ -265,7 +358,8 @@ p {
 }
 
 .year-company {
-  min-width: 200px;
+  min-width: 100px;
+  padding-right: 10px;
 }
 
 .year-company h5 {
@@ -342,7 +436,7 @@ p {
 }
 
 /* scroll up */
-.scroll-up{
+.scroll-up {
   position: fixed;
   width: 40px;
   height: 40px;
@@ -351,25 +445,25 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .3rem;
-  background-color: rgba(132, 140, 153, .5);
+  padding: 0.3rem;
+  background-color: rgba(132, 140, 153, 0.5);
   border-radius: 50%;
   z-index: 2;
-  transition: .4s;
+  transition: 0.4s;
   visibility: hidden;
   text-decoration: none;
 }
 
-.scroll-up:hover{
+.scroll-up:hover {
   transform: scale(1.2);
 }
 
-.scroll-up .fa{
+.scroll-up .fa {
   font-size: 1.5rem;
   color: var(--skills-text);
 }
 
-.show{
+.show {
   visibility: visible;
   bottom: 2rem;
 }
@@ -433,4 +527,29 @@ p {
   .list-skill .box {
     margin: 0;
     text-align: left;
-  }}
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .page {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
+}
