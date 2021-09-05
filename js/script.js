@@ -36,8 +36,8 @@ let opt = {
 
 pdfBtn.addEventListener("click", function () {
   body.classList.add("scale-cv");
-  window.print()
-  // html2pdf(areaCV, opt);
+  // window.print()
+  html2pdf(areaCV, opt);
 
   // if (html.dataset.themeColor === "dark") {
   //   html.dataset.themeColor = "light";
