@@ -372,14 +372,14 @@ p {
 .scale-cv .list-skill,
 .list-skill {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .scale-cv .list-skill .box,
 .list-skill .box {
   position: relative;
   width: 100%;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   padding: 0 5px;
   /* display: grid;
   grid-template-columns: 160px 1fr; */
