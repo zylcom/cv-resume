@@ -29,18 +29,18 @@ window.addEventListener("scroll", scrollUp);
 let opt = {
   margin: 0,
   filename: "CV_SABILILLAH.pdf",
-  image: { type: "jpeg", quality: 0.98 },
+  image: { type: "jpeg", quality: 0.95 },
   html2canvas: { scale: 4 },
   jsPDF: { format: "a4", orientation: "portrait" },
 };
 
 pdfBtn.addEventListener("click", function () {
   body.classList.add("scale-cv");
-  // window.print()
+  // window.print();
 
   setTimeout(() => {
-    // html2pdf(areaCV, opt);
-  }, 1000);
+    html2pdf(areaCV, opt);
+  }, 100);
 
   // if (html.dataset.themeColor === "dark") {
   //   html.dataset.themeColor = "light";
@@ -48,7 +48,7 @@ pdfBtn.addEventListener("click", function () {
   //   icon.classList.add("fa-moon-o");
   // }
 
-  // setTimeout(() => {
-  //   body.classList.remove("scale-cv");
-  // }, 10000);
+  setTimeout(() => {
+    body.classList.remove("scale-cv");
+  }, 1000);
 });
