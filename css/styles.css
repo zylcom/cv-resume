@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anonymous+Pro&family=Inter:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+a,
+p {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  padding: 8px;
+}
+
+.personal {
+  display: grid;
+  row-gap: 0.8rem;
+  grid-template-columns: 120px auto;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.personal .role {
+  font-size: 0.8rem;
+}
+
+.personal .links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.personal .links a {
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.personal .links a:nth-child(2) {
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  border-width: 0 1px;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+.personal .personal-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  font-size: 0.8rem;
+  grid-column: span 2 / span 2;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.personal .personal-info a {
+  display: block;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.personal .personal-info a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+#profile-img {
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+}
+
+#profile-name {
+  font-family: "Abril Fatface", cursive;
+  font-size: 2.8rem;
+  text-align: center;
+  padding-top: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#main .title {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  margin-bottom: 7px;
+  line-height: 1.2rem;
+}
+
+.projects-lists {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+}
+
+.project-title {
+  color: black;
+  margin-bottom: 5px;
+}
+
+.project-title ~ p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.project-title ~ ul {
+  font-size: 0.9rem;
+  padding-left: 20px;
+}
+
+.project-title ~ ul li {
+  line-height: 1.3rem;
+  list-style: circle;
+}
+
+#education ~ ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+}
+
+#education ~ ul li,
+#languages ~ ul li {
+  list-style: none;
+}
+
+#education ~ ul li h3 {
+  font-size: 1.025rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+#skills ~ ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#skills ~ ul li {
+  list-style: none;
+  background: #eee;
+  padding: 6px 10px;
+  color: black;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.certificate-name {
+  margin-bottom: 5px;
+}
+
+.certificate-name a {
+  font-family: "Anonymous Pro", monospace;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.certificate-name ~ p {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 45px;
+  }
+
+  .personal {
+    grid-template-columns: 180px 1fr 1fr;
+    align-items: start;
+  }
+
+  .personal .links {
+    justify-content: flex-start;
+  }
+
+  .personal .personal-info {
+    grid-column: span 1 / span 1;
+  }
+}

@@ -178,7 +178,8 @@ body {
 
 .info.contact ul,
 .info.education ul,
-.info.languages ul {
+.info.languages ul,
+.info.certificates ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -193,9 +194,21 @@ body {
 .info.contact a,
 .info.contact p,
 .info.education p,
-.info.info.languages p {
-  text-decoration: none;
+.info.languages p,
+.info.certificates p {
+  /* text-decoration: none; */
   font-family: var(--font-montserrat);
+  color: var(--paragraph);
+  font-size: var(--small-font-size);
+}
+
+.info.certificates a {
+  font-size: 1.1rem;
+  color: var(--primary-text);
+}
+
+.info.certificates p {
+  font-size: var(--small-font-size);
   color: var(--paragraph);
 }
 
@@ -289,23 +302,6 @@ body {
   font-size: var(--small-font-size);
 }
 
-.list-hobby {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.list-hobby li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.list-hobby .fa {
-  color: var(--color-democrat);
-  font-size: var(--larger-icon-size);
-}
-
 .scroll-up {
   position: fixed;
   text-decoration: none;
@@ -366,6 +362,14 @@ body.scale-cv .info.education ul {
   font-size: 0.9rem;
 }
 
+body.scale-cv .info.contact a,
+body.scale-cv .info.contact p,
+body.scale-cv .info.education p,
+body.scale-cv .info.languages p,
+body.scale-cv .info.certificates p {
+  white-space: nowrap;
+}
+
 body.scale-cv .info.education p:first-child {
   font-size: 1rem;
   font-weight: 700;
@@ -392,11 +396,6 @@ body.scale-cv .list-skill.technical-skill li {
   font-size: var(--small-font-size);
 }
 
-body.scale-cv .about.interest .title,
-body.scale-cv .list-hobby {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
   .list-skill {
     list-style: circle;
@@ -415,20 +414,11 @@ body.scale-cv .list-hobby {
     padding: 0;
     margin: 50px 0;
     grid-template-rows: 1fr;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 330px 1fr;
   }
 
   .list-skill.soft-skill,
   .list-skill.technical-skill {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .list-hobby {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  body.scale-cv .about.interest .title,
-  body.scale-cv .list-hobby {
-    display: none;
   }
 }
